@@ -4,41 +4,51 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#f8f8f8"
-    android:orientation="vertical" >
+    android:orientation="vertical">
 
     <ImageView
-        android:id="@+id/iv_cancel"
+        android:id="@+id/iv_back"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
         android:onClick="onClick"
         android:padding="20dp"
-        android:src="@mipmap/ic_login_cancle_normal" />
+        android:src="@mipmap/ic_back"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+    <TextView
+        android:textColor="#000000"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/register_account"
+        android:padding="15dp"
+        android:textSize="20dp"
+        android:id="@+id/textView"
+        android:layout_alignBottom="@+id/iv_back"
+        android:layout_centerHorizontal="true" />
 
     <ImageView
         android:id="@+id/iv_logo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="84dp"
-         />
+        android:layout_marginTop="84dp" />
 
     <RelativeLayout
         android:id="@+id/layout_phone"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/iv_logo"
         android:layout_marginTop="46dp"
-        android:background="@android:color/white"
-        android:layout_below="@+id/iv_logo" >
+        android:background="@android:color/white">
 
         <com.devilwwj.loginandregister.views.CleanEditText
             android:id="@+id/et_phone"
             style="@style/login_edit_style"
+            android:layout_toLeftOf="@+id/btn_send_verifi_code"
             android:hint="手机号"
             android:inputType="phone"
-            android:layout_toLeftOf="@+id/btn_send_verifi_code"
-            android:maxLength="11" >
+            android:maxLength="11">
 
             <requestFocus />
         </com.devilwwj.loginandregister.views.CleanEditText>
@@ -79,24 +89,26 @@
         style="@style/login_edit_style"
         android:layout_below="@+id/et_password"
         android:layout_marginTop="10dp"
-        android:maxLength="32"
-        android:singleLine="true"
         android:hint="昵称"
-        android:inputType="text" />
+        android:inputType="text"
+        android:maxLength="32"
+        android:singleLine="true" />
 
     <Button
         android:id="@+id/btn_create_account"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
         android:layout_height="wrap_content"
         android:layout_below="@+id/et_nickname"
         android:layout_centerHorizontal="true"
-        android:layout_gravity="center_horizontal"
         android:layout_marginTop="30dp"
         android:background="@drawable/btn_login_selector"
+
         android:onClick="onClick"
         android:text="@string/create_account"
-        android:textColor="#5c5c5c"
-        android:textSize="16sp" />
+        android:textColor="#ea868585"
+        android:textSize="20dp" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -104,7 +116,7 @@
         android:layout_below="@+id/btn_create_account"
         android:layout_marginTop="10dp"
         android:gravity="center_horizontal"
-        android:orientation="horizontal" >
+        android:orientation="horizontal">
 
         <TextView
             android:layout_width="wrap_content"

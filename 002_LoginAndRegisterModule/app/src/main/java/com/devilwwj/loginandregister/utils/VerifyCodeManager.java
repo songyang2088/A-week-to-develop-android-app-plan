@@ -93,69 +93,69 @@ public class VerifyCodeManager {
 		getVerifiCodeButton.setClickable(true);
 	}
 
-//	private AsyncHttpResponseHandler getVerifyCodeHandler = new AsyncHttpResponseHandler() {
-//
-//		@Override
-//		public void onSuccess(int arg0, Header[] arg1, byte[] arg2) {
-//			try {
-//				if (arg2 != null) {
-//					String respone = new String(arg2);
-//					LogUtils.e("verifyCode", respone);
-//					// {"status":"false","code":15,"message":"\u8be5\u7535\u8bdd\u53f7\u7801\u5df2\u88ab\u5360\u7528\uff0c\u8bf7\u91cd\u65b0\u9009\u62e9"}
-//					JSONObject jsonObject = new JSONObject(respone);
-//					jsonObject.optBoolean("status");
-//					int code = jsonObject.optInt("code");
-//					switch (code) {
-//					case 15: // 账号已存在
-//						ToastUtils.showShort(mContext,
-//								R.string.tip_phone_exist_please_login);
-//						setButtonStatusOn();
-//						break;
-//					case 0:
-//						ToastUtils.showShort(mContext, "验证码发送成功");
-//						break;
-//					case 6:
-//						ToastUtils.showShort(mContext, "手机号不存在，请注册");
-//						setButtonStatusOn();
-//						break;
-//					case 2003: // 账号不存在
-//						ToastUtils.showShort(mContext,
-//								R.string.tip_phone_not_exist);
-//						setButtonStatusOn();
-//						break;
-//					case 2015: // 手机账号已经绑定
-//						ToastUtils.showShort(mContext, "手机号已被绑定，请直接使用该手机号登录");
-//						break;
-//					case 1001: // 客户端验证错误
-//						ToastUtils.showShort(mContext, "客户端验证失败");
-//						break;
-//					case 1005: // 验证码错误
-//						ToastUtils.showShort(mContext, "验证码不正确");
-//						break;
-//					case 2007: // 用户保存失败
-//
-//						break;
-//
-//					default:
-//						ToastUtils.showShort(mContext, "发送验证码失败，请重试");
-//						setButtonStatusOn();
-//						break;
-//					}
-//
-//				}
-//			} catch (JSONException e) {
-//				e.printStackTrace();
-//			}
-//		}
-//
-//		@Override
-//		public void onFailure(int arg0, Header[] arg1, byte[] arg2,
-//				Throwable arg3) {
-//			if (arg2 != null) {
-//				ToastUtils.showShort(mContext, "发送验证码失败，请重试");
-//				setButtonStatusOn();
-//			}
-//		}
-//	};
+/*	private AsyncHttpResponseHandler getVerifyCodeHandler = new AsyncHttpResponseHandler() {
+
+		@Override
+		public void onSuccess(int arg0, Header[] arg1, byte[] arg2) {
+			try {
+				if (arg2 != null) {
+					String respone = new String(arg2);
+					LogUtils.e("verifyCode", respone);
+					// {"status":"false","code":15,"message":"\u8be5\u7535\u8bdd\u53f7\u7801\u5df2\u88ab\u5360\u7528\uff0c\u8bf7\u91cd\u65b0\u9009\u62e9"}
+					JSONObject jsonObject = new JSONObject(respone);
+					jsonObject.optBoolean("status");
+					int code = jsonObject.optInt("code");
+					switch (code) {
+					case 15: // 账号已存在
+						ToastUtils.showShort(mContext,
+								R.string.tip_phone_exist_please_login);
+						setButtonStatusOn();
+						break;
+					case 0:
+						ToastUtils.showShort(mContext, "验证码发送成功");
+						break;
+					case 6:
+						ToastUtils.showShort(mContext, "手机号不存在，请注册");
+						setButtonStatusOn();
+						break;
+					case 2003: // 账号不存在
+						ToastUtils.showShort(mContext,
+								R.string.tip_phone_not_exist);
+						setButtonStatusOn();
+						break;
+					case 2015: // 手机账号已经绑定
+						ToastUtils.showShort(mContext, "手机号已被绑定，请直接使用该手机号登录");
+						break;
+					case 1001: // 客户端验证错误
+						ToastUtils.showShort(mContext, "客户端验证失败");
+						break;
+					case 1005: // 验证码错误
+						ToastUtils.showShort(mContext, "验证码不正确");
+						break;
+					case 2007: // 用户保存失败
+
+						break;
+
+					default:
+						ToastUtils.showShort(mContext, "发送验证码失败，请重试");
+						setButtonStatusOn();
+						break;
+					}
+
+				}
+			} catch (JSONException e) {
+				e.printStackTrace();
+			}
+		}
+
+		@Override
+		public void onFailure(int arg0, Header[] arg1, byte[] arg2,
+				Throwable arg3) {
+			if (arg2 != null) {
+				ToastUtils.showShort(mContext, "发送验证码失败，请重试");
+				setButtonStatusOn();
+			}
+		}
+	};*/
 
 }

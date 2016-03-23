@@ -9,6 +9,8 @@ import android.text.method.PasswordTransformationMethod;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.inputmethod.EditorInfo;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -42,6 +44,7 @@ public class LoginActivity extends Activity implements OnClickListener {
     private static final int REQUEST_CODE_TO_REGISTER = 0x001;
 
     // 界面控件
+    private CheckBox checkBox;
     private CleanEditText accountEdit;
     private CleanEditText passwordEdit;
 
@@ -71,6 +74,7 @@ public class LoginActivity extends Activity implements OnClickListener {
      * 初始化视图
      */
     private void initViews() {
+
         accountEdit = (CleanEditText) this.findViewById(R.id.et_email_phone);
         accountEdit.setImeOptions(EditorInfo.IME_ACTION_NEXT);
         accountEdit.setTransformationMethod(HideReturnsTransformationMethod
@@ -90,6 +94,18 @@ public class LoginActivity extends Activity implements OnClickListener {
                     clickLogin();
                 }
                 return false;
+            }
+        });
+        checkBox= (CheckBox) findViewById(R.id.cb_showpassword);
+        checkBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (checkBox.isChecked()) {
+                    passwordEdit.setTransformationMethod(HideReturnsTransformationMethod.getInstance());
+
+                }else{
+                    passwordEdit.setTransformationMethod(PasswordTransformationMethod.getInstance());
+                }
             }
         });
     }
@@ -137,18 +153,22 @@ public class LoginActivity extends Activity implements OnClickListener {
             case R.id.iv_cancel:
                 finish();
                 break;
+            //以游客身份访问
+            case R.id.bt_guest:
+
+                break;
             case R.id.btn_login:
                 clickLogin();
                 break;
-            case R.id.iv_wechat:
-                clickLoginWexin();
-                break;
-            case R.id.iv_qq:
-                clickLoginQQ();
-                break;
-            case R.id.iv_sina:
-                loginThirdPlatform(SHARE_MEDIA.SINA);
-                break;
+//            case R.id.iv_wechat:
+//                clickLoginWexin();
+//                break;
+//            case R.id.iv_qq:
+//                clickLoginQQ();
+//                break;
+//            case R.id.iv_sina:
+//                loginThirdPlatform(SHARE_MEDIA.SINA);
+//                break;
             case R.id.tv_create_account:
                 enterRegister();
                 break;
@@ -163,26 +183,26 @@ public class LoginActivity extends Activity implements OnClickListener {
     /**
      * 点击使用QQ快速登录
      */
-    private void clickLoginQQ() {
-        if (!Utils.isQQClientAvailable(this)) {
-            ToastUtils.showShort(LoginActivity.this,
-                    getString(R.string.no_install_qq));
-        } else {
-            loginThirdPlatform(SHARE_MEDIA.QZONE);
-        }
-    }
+//    private void clickLoginQQ() {
+//        if (!Utils.isQQClientAvailable(this)) {
+//            ToastUtils.showShort(LoginActivity.this,
+//                    getString(R.string.no_install_qq));
+//        } else {
+//            loginThirdPlatform(SHARE_MEDIA.QZONE);
+//        }
+//    }
 
     /**
      * 点击使用微信登录
      */
-    private void clickLoginWexin() {
-        if (!Utils.isWeixinAvilible(this)) {
-            ToastUtils.showShort(LoginActivity.this,
-                    getString(R.string.no_install_wechat));
-        } else {
-            loginThirdPlatform(SHARE_MEDIA.WEIXIN);
-        }
-    }
+//    private void clickLoginWexin() {
+//        if (!Utils.isWeixinAvilible(this)) {
+//            ToastUtils.showShort(LoginActivity.this,
+//                    getString(R.string.no_install_wechat));
+//        } else {
+//            loginThirdPlatform(SHARE_MEDIA.WEIXIN);
+//        }
+//    }
 
     /**
      * 跳转到忘记密码
@@ -199,6 +219,13 @@ public class LoginActivity extends Activity implements OnClickListener {
         Intent intent = new Intent(this, SignUpActivity.class);
         startActivityForResult(intent, REQUEST_CODE_TO_REGISTER);
     }
+    /*
+     *跳转到游客界面
+     */
+    private void enterguest(){
+
+    }
+
 
 
     /**
@@ -206,7 +233,7 @@ public class LoginActivity extends Activity implements OnClickListener {
      *
      * @param platform
      */
-    private void loginThirdPlatform(final SHARE_MEDIA platform) {
+/*    private void loginThirdPlatform(final SHARE_MEDIA platform) {
         mController.doOauthVerify(LoginActivity.this, platform,
                 new UMAuthListener() {
 
@@ -262,11 +289,11 @@ public class LoginActivity extends Activity implements OnClickListener {
     }
 
 
-    /**
+    *//**
      * 获取用户信息
      *
      * @param platform
-     */
+     *//*
     private void getUserInfo(final SHARE_MEDIA platform) {
         mController.getPlatformInfo(LoginActivity.this, platform,
                 new UMDataListener() {
@@ -351,5 +378,5 @@ public class LoginActivity extends Activity implements OnClickListener {
                     }
 
                 });
-    }
+    }*/
 }

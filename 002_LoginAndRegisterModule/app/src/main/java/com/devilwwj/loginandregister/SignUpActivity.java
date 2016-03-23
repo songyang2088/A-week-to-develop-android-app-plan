@@ -122,6 +122,8 @@ public class SignUpActivity extends Activity implements OnClickListener{
                 // TODO 请求接口发送验证码
                 codeManager.getVerifyCode(VerifyCodeManager.REGISTER);
                 break;
+            case R.id.iv_back:
+                finish();
 
             default:
                 break;
