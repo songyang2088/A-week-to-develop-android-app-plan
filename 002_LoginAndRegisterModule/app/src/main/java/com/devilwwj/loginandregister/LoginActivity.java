@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.text.TextUtils;
 import android.text.method.HideReturnsTransformationMethod;
 import android.text.method.PasswordTransformationMethod;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.inputmethod.EditorInfo;
@@ -65,6 +66,8 @@ public class LoginActivity extends Activity implements OnClickListener {
         setContentView(R.layout.activity_login);
 
         initViews();
+        float scale=getResources().getDisplayMetrics().density;
+        Log.d("LoginActivity",scale+"");
 
         // 配置分享平台
         ShareUtils.configPlatforms(this);
@@ -82,6 +85,7 @@ public class LoginActivity extends Activity implements OnClickListener {
         passwordEdit = (CleanEditText) this.findViewById(R.id.et_password);
         passwordEdit.setImeOptions(EditorInfo.IME_ACTION_DONE);
         passwordEdit.setImeOptions(EditorInfo.IME_ACTION_GO);
+//        隐藏显示密码
         passwordEdit.setTransformationMethod(PasswordTransformationMethod
                 .getInstance());
         passwordEdit.setOnEditorActionListener(new TextView.OnEditorActionListener() {
@@ -96,14 +100,14 @@ public class LoginActivity extends Activity implements OnClickListener {
                 return false;
             }
         });
-        checkBox= (CheckBox) findViewById(R.id.cb_showpassword);
+        checkBox = (CheckBox) findViewById(R.id.cb_showpassword);
         checkBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (checkBox.isChecked()) {
                     passwordEdit.setTransformationMethod(HideReturnsTransformationMethod.getInstance());
 
-                }else{
+                } else {
                     passwordEdit.setTransformationMethod(PasswordTransformationMethod.getInstance());
                 }
             }
@@ -132,7 +136,7 @@ public class LoginActivity extends Activity implements OnClickListener {
                     .show();
         } else {
             // 账号不匹配手机号格式（11位数字且以1开头）
-            if ( !RegexUtils.checkMobile(account)) {
+            if (!RegexUtils.checkMobile(account)) {
                 Toast.makeText(this, R.string.tip_account_regex_not_right,
                         Toast.LENGTH_LONG).show();
             } else if (password == null || password.trim().equals("")) {
@@ -150,11 +154,11 @@ public class LoginActivity extends Activity implements OnClickListener {
     public void onClick(View v) {
         Intent intent = null;
         switch (v.getId()) {
-            case R.id.iv_cancel:
-                finish();
-                break;
+//            case R.id.iv_cancel:
+//                finish();
+//                break;
             //以游客身份访问
-            case R.id.bt_guest:
+            case R.id.btn_guest:
 
                 break;
             case R.id.btn_login:
@@ -219,13 +223,13 @@ public class LoginActivity extends Activity implements OnClickListener {
         Intent intent = new Intent(this, SignUpActivity.class);
         startActivityForResult(intent, REQUEST_CODE_TO_REGISTER);
     }
+
     /*
      *跳转到游客界面
      */
-    private void enterguest(){
+    private void enterguest() {
 
     }
-
 
 
     /**

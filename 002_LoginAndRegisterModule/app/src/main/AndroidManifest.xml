@@ -32,6 +32,12 @@
             android:theme="@android:style/Theme.Translucent.NoTitleBar"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:windowSoftInputMode="stateHidden|adjustResize"/>
+        <activity android:name=".views.SetPasswordActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".views.SetUserNameActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".views.SetFrogetPasswordActivity"
+            android:screenOrientation="portrait"/>
     </application>
     <uses-permission android:name="android.permission.READ_CONTACTS"/>
     <uses-permission android:name="android.permission.READ_PHONE_STATE"/>

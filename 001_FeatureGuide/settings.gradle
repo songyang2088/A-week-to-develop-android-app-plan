@@ -1,1 +1,1 @@
-include ':app'
+include ':app', ':arraylistdemo', ':fragementbestpractice', ':broadcasttest', ':broadcastbestpractice', ':databasetest', ':notification'

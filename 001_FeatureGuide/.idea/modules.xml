@@ -4,6 +4,12 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/001_FeatureGuide.iml" filepath="$PROJECT_DIR$/001_FeatureGuide.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/arraylistdemo/arraylistdemo.iml" filepath="$PROJECT_DIR$/arraylistdemo/arraylistdemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/broadcastbestpractice/broadcastbestpractice.iml" filepath="$PROJECT_DIR$/broadcastbestpractice/broadcastbestpractice.iml" />
+      <module fileurl="file://$PROJECT_DIR$/broadcasttest/broadcasttest.iml" filepath="$PROJECT_DIR$/broadcasttest/broadcasttest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/databasetest/databasetest.iml" filepath="$PROJECT_DIR$/databasetest/databasetest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/fragementbestpractice/fragementbestpractice.iml" filepath="$PROJECT_DIR$/fragementbestpractice/fragementbestpractice.iml" />
+      <module fileurl="file://$PROJECT_DIR$/notification/notification.iml" filepath="$PROJECT_DIR$/notification/notification.iml" />
     </modules>
   </component>
 </project>

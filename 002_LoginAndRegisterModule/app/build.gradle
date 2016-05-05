@@ -33,6 +33,7 @@ dependencies {
     compile files('libs/umeng_social_sdk.jar')
     compile name:'SMSSDK-2.0.2',ext:'aar'
     compile name:'SMSSDKGUI-2.0.2',ext:'aar'
+    compile 'com.jakewharton:butterknife:6.1.0'
 }
 repositories{
     flatDir{

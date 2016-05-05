@@ -21,7 +21,7 @@ import java.util.List;
 /**
  * 欢迎页
  * 
- * @author wwj_748
+ * @author
  * 
  */
 public class WelcomeGuideActivity extends Activity implements OnClickListener {

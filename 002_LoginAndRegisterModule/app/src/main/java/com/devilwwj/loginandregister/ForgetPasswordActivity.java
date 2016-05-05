@@ -1,6 +1,7 @@
 package com.devilwwj.loginandregister;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -17,6 +18,7 @@ import com.devilwwj.loginandregister.utils.RegexUtils;
 import com.devilwwj.loginandregister.utils.ToastUtils;
 import com.devilwwj.loginandregister.utils.VerifyCodeManager;
 import com.devilwwj.loginandregister.views.CleanEditText;
+import com.devilwwj.loginandregister.views.SetFrogetPasswordActivity;
 
 import java.util.HashMap;
 import java.util.Random;
@@ -31,17 +33,19 @@ import static android.view.View.*;
  * @desc 忘记密码
  * Created by devilwwj on 16/1/24.
  */
-public class ForgetPasswordActivity extends Activity implements OnClickListener,Handler.Callback {
+public class ForgetPasswordActivity extends Activity implements OnClickListener, Handler.Callback {
     private static final String TAG = "SignupActivity";
     // 界面控件
     private CleanEditText phoneEdit;
     private CleanEditText passwordEdit;
     private CleanEditText verifyCodeEdit;
     private Button getVerifiCodeButton;
-    private static String APPKEY ="107a790b31dee";
+    private Button nextButton;
+    /*    private static String APPKEY ="107a790b31dee";
     private static String APPSECRET ="c8e45e28dc927edbb904d104b29287d1";
-    private boolean ready;
+    private boolean ready;*/
 
+/*
     private VerifyCodeManager codeManager;
     private static final String[] AVATARS = {
             "http://tupian.qqjay.com/u/2011/0729/e755c434c91fed9f6f73152731788cb3.jpg",
@@ -57,6 +61,7 @@ public class ForgetPasswordActivity extends Activity implements OnClickListener,
             "http://img1.touxiang.cn/uploads/20130515/15-080722_514.jpg",
             "http://diy.qqjay.com/u2/2013/0401/4355c29b30d295b26da6f242a65bcaad.jpg"
     };
+*/
 
 
     @Override
@@ -66,8 +71,8 @@ public class ForgetPasswordActivity extends Activity implements OnClickListener,
 
         initViews();
         //启动SMSSDK
-        SMSSDK.initSDK(this, APPKEY,APPSECRET,true );
-        codeManager = new VerifyCodeManager(this, phoneEdit, getVerifiCodeButton);
+/*        SMSSDK.initSDK(this, APPKEY,APPSECRET,true );
+       codeManager = new VerifyCodeManager(this, phoneEdit, getVerifiCodeButton);*/
 
     }
 
@@ -96,7 +101,7 @@ public class ForgetPasswordActivity extends Activity implements OnClickListener,
         phoneEdit.setImeOptions(EditorInfo.IME_ACTION_NEXT);// 下一步
         verifyCodeEdit = getView(R.id.et_verifiCode);
         verifyCodeEdit.setImeOptions(EditorInfo.IME_ACTION_NEXT);// 下一步
-        passwordEdit = getView(R.id.et_password);
+/*        passwordEdit = getView(R.id.et_password);
         passwordEdit.setImeOptions(EditorInfo.IME_ACTION_DONE);
         passwordEdit.setImeOptions(EditorInfo.IME_ACTION_GO);
         passwordEdit.setOnEditorActionListener(new TextView.OnEditorActionListener() {
@@ -111,10 +116,23 @@ public class ForgetPasswordActivity extends Activity implements OnClickListener,
                 }
                 return false;
             }
+        });*/
+        verifyCodeEdit.setOnEditorActionListener(new TextView.OnEditorActionListener() {
+            @Override
+            public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
+                if (actionId == EditorInfo.IME_ACTION_NEXT) {
+                    Intent intent = new Intent(ForgetPasswordActivity.this, SetFrogetPasswordActivity.class);
+                    startActivity(intent);
+                }
+
+                return false;
+            }
         });
+        nextButton = (Button) findViewById(R.id.bt_next);
+        nextButton.setOnClickListener(this);
     }
 
-    private void commit() {
+/*    private void commit() {
         String phone = phoneEdit.getText().toString().trim();
         String password = passwordEdit.getText().toString().trim();
         String code = verifyCodeEdit.getText().toString().trim();
@@ -122,7 +140,7 @@ public class ForgetPasswordActivity extends Activity implements OnClickListener,
         if (checkInput(phone, password, code)) {
             // TODO:请求服务端注册账号
         }
-    }
+    }*/
 
     private boolean checkInput(String phone, String password, String code) {
         if (TextUtils.isEmpty(phone)) { // 电话号码为空
@@ -144,19 +162,19 @@ public class ForgetPasswordActivity extends Activity implements OnClickListener,
         return false;
     }
 
-/*    @Override
-    public void onClick(View v) {
-        switch (v.getId()) {
-            case R.id.btn_send_verifi_code:
-                // TODO 请求接口发送验证码
-                codeManager.getVerifyCode(VerifyCodeManager.RESET_PWD);
-                break;
+    /*    @Override
+        public void onClick(View v) {
+            switch (v.getId()) {
+                case R.id.btn_send_verifi_code:
+                    // TODO 请求接口发送验证码
+                    codeManager.getVerifyCode(VerifyCodeManager.RESET_PWD);
+                    break;
 
-            default:
-                break;
-        }
-    }*/
-    private void initSDK() {
+                default:
+                    break;
+            }
+        }*/
+/*    private void initSDK() {
         // 初始化短信SDK
         SMSSDK.initSDK(this, APPKEY, APPSECRET, true);
 
@@ -175,11 +193,11 @@ public class ForgetPasswordActivity extends Activity implements OnClickListener,
         ready = true;
 
 
-    }
+    }*/
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.btn_send_verifi_code:
-                // 打开注册页面
+/*                // 打开注册页面
                 RegisterPage registerPage = new RegisterPage();
                 registerPage.setRegisterCallback(new EventHandler() {
                     public void afterEvent(int event, int result, Object data) {
@@ -195,10 +213,13 @@ public class ForgetPasswordActivity extends Activity implements OnClickListener,
                     }
                 });
                 registerPage.show(this);
-                break;
+                break;*/
             case R.id.iv_back:
                 finish();
                 break;
+            case R.id.bt_next:
+                Intent intent = new Intent(this, SetFrogetPasswordActivity.class);
+                startActivity(intent);
         }
     }
 
@@ -206,12 +227,13 @@ public class ForgetPasswordActivity extends Activity implements OnClickListener,
     public boolean handleMessage(Message msg) {
         return false;
     }
-    private void registerUser(String country, String phone) {
+/*    private void registerUser(String country, String phone) {
         Random rnd = new Random();
         int id = Math.abs(rnd.nextInt());
         String uid = String.valueOf(id);
         String nickName = "SmsSDK_User_" + uid;
         String avatar = AVATARS[id % 12];
         SMSSDK.submitUserInfo(uid, nickName, avatar, country, phone);
-    }
+    }*/
+
 }
