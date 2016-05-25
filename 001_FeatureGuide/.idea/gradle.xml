@@ -15,7 +15,10 @@
             <option value="$PROJECT_DIR$/broadcasttest" />
             <option value="$PROJECT_DIR$/databasetest" />
             <option value="$PROJECT_DIR$/fragementbestpractice" />
+            <option value="$PROJECT_DIR$/message" />
             <option value="$PROJECT_DIR$/notification" />
+            <option value="$PROJECT_DIR$/smsmessage" />
+            <option value="$PROJECT_DIR$/ziputil" />
           </set>
         </option>
       </GradleProjectSettings>

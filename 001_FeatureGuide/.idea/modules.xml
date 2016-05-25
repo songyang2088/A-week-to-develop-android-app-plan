@@ -9,7 +9,10 @@
       <module fileurl="file://$PROJECT_DIR$/broadcasttest/broadcasttest.iml" filepath="$PROJECT_DIR$/broadcasttest/broadcasttest.iml" />
       <module fileurl="file://$PROJECT_DIR$/databasetest/databasetest.iml" filepath="$PROJECT_DIR$/databasetest/databasetest.iml" />
       <module fileurl="file://$PROJECT_DIR$/fragementbestpractice/fragementbestpractice.iml" filepath="$PROJECT_DIR$/fragementbestpractice/fragementbestpractice.iml" />
+      <module fileurl="file://$PROJECT_DIR$/message/message.iml" filepath="$PROJECT_DIR$/message/message.iml" />
       <module fileurl="file://$PROJECT_DIR$/notification/notification.iml" filepath="$PROJECT_DIR$/notification/notification.iml" />
+      <module fileurl="file://$PROJECT_DIR$/smsmessage/smsmessage.iml" filepath="$PROJECT_DIR$/smsmessage/smsmessage.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ziputil/ziputil.iml" filepath="$PROJECT_DIR$/ziputil/ziputil.iml" />
     </modules>
   </component>
 </project>
