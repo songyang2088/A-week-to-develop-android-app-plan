@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/layout_root"
@@ -102,4 +103,147 @@
 
 
 
+=======
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#293340">
+
+
+    <LinearLayout
+        android:id="@+id/title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="#232c37"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/iv_back_selector"
+            android:clickable="true"
+            android:onClick="onClick"
+            android:padding="20dp" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="32dp"
+            android:text="@string/forget_password"
+            android:textColor="#ffffff"
+            android:textSize="16dp" />
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/layout_phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title_layout"
+        android:layout_marginTop="24dp">
+
+        <ImageView
+            android:id="@+id/iv_iconphone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/line1"
+            android:layout_alignLeft="@+id/line1"
+            android:src="@mipmap/icon_phone" />
+
+        <com.devilwwj.loginandregister.views.CleanEditText
+            android:id="@+id/et_phone"
+            style="@style/login_edit_style"
+            android:layout_centerHorizontal="true"
+            android:layout_toRightOf="@+id/iv_iconphone"
+            android:hint="手机号"
+            android:inputType="phone"
+            android:maxLength="11" />
+
+
+        <View
+            android:id="@+id/line1"
+            android:layout_width="312dp"
+            android:layout_height="0.5dp"
+            android:layout_below="@+id/et_phone"
+            android:layout_centerHorizontal="true"
+            android:background="#525f6e" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_verifiCode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layout_phone">
+
+
+        <com.devilwwj.loginandregister.views.CleanEditText
+            android:id="@+id/et_verifiCode"
+            style="@style/login_edit_style"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:ems="10"
+            android:hint="验证码"
+            android:inputType="number" />
+
+        <View
+            android:layout_width="312dp"
+            android:layout_height="0.5dp"
+            android:layout_below="@+id/et_verifiCode"
+            android:layout_centerHorizontal="true"
+            android:background="#525f6e" />
+
+        <Button
+            android:id="@+id/btn_send_verifi_code"
+            android:layout_width="88dp"
+            android:layout_height="24dp"
+            android:layout_alignEnd="@+id/et_verifiCode"
+            android:layout_alignRight="@+id/et_verifiCode"
+            android:layout_alignTop="@+id/et_verifiCode"
+            android:background="#293340"
+            android:text="@string/send_verification_code"
+            android:textColor="#ffffff"
+            android:textSize="12dp" />
+
+    </RelativeLayout>
+    <!--  <com.devilwwj.loginandregister.views.CleanEditText
+          android:id="@+id/et_password"
+          style="@style/login_edit_style"
+          android:layout_below="@+id/et_verifiCode"
+          android:layout_marginTop="0.5dp"
+          android:ems="10"
+          android:hint="密码"
+          android:inputType="textPassword" />
+
+      <com.devilwwj.loginandregister.views.CleanEditText
+          android:id="@+id/et_nickname"
+          style="@style/login_edit_style"
+          android:layout_below="@+id/et_password"
+          android:layout_marginTop="10dp"
+          android:hint="昵称"
+          android:inputType="text"
+          android:maxLength="32"
+          android:singleLine="true" /> -->
+
+    <Button
+        android:id="@+id/bt_next"
+        android:layout_width="264dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layout_verifiCode"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="22dp"
+        android:background="@drawable/btn_login_selector"
+        android:onClick="onClick"
+        android:text="@string/next"
+        android:textColor="#ffffff"
+        android:textSize="16dp" />
+>>>>>>> aaf7b2276b7739d4bfe56a36748a0b3c0cb244bc
 </RelativeLayout>

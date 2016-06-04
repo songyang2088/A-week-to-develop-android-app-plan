@@ -1,4 +1,12 @@
+<<<<<<< HEAD
 <resources>
     <string name="app_name">技巧1：功能引导页</string>
     <string name="action_settings">Settings</string>
 </resources>
+=======
+<resources>
+    <string name="app_name">技巧1：功能引导页</string>
+    <string name="action_settings">Settings</string>
+    <string name="in">点击进入</string>
+</resources>
+>>>>>>> aaf7b2276b7739d4bfe56a36748a0b3c0cb244bc
