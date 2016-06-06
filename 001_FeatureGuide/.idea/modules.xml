@@ -13,6 +13,7 @@
       <module fileurl="file://$PROJECT_DIR$/message/message.iml" filepath="$PROJECT_DIR$/message/message.iml" />
       <module fileurl="file://$PROJECT_DIR$/notification/notification.iml" filepath="$PROJECT_DIR$/notification/notification.iml" />
       <module fileurl="file://$PROJECT_DIR$/smsmessage/smsmessage.iml" filepath="$PROJECT_DIR$/smsmessage/smsmessage.iml" />
+      <module fileurl="file://$PROJECT_DIR$/threadtest/threadtest.iml" filepath="$PROJECT_DIR$/threadtest/threadtest.iml" />
       <module fileurl="file://$PROJECT_DIR$/ziputil/ziputil.iml" filepath="$PROJECT_DIR$/ziputil/ziputil.iml" />
     </modules>
   </component>

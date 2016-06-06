@@ -5,6 +5,8 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.os.Handler;
+import android.os.Message;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.telephony.SmsManager;
@@ -20,10 +22,22 @@ public class MainActivity extends AppCompatActivity {
 *
 *
 * */
+    public static final int SEND_MESSAGE=1;
     private Button send;
     private EditText content;
     private EditText to;
     private SendStatusReceiver sendStatusReceiver;
+    private Handler handler=new Handler(){
+        public void handlMessage(Message msg){
+            switch (msg.what){
+                case SEND_MESSAGE:
+
+
+            }
+
+        }
+    };
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,12 +53,21 @@ public class MainActivity extends AppCompatActivity {
         send.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String number=to.getText().toString();
-                String context=content.getText().toString();
-                SmsManager manager=SmsManager.getDefault();
-                Intent sentIntent=new Intent("SENT_SMS_ACTION");
-                PendingIntent pi=PendingIntent.getBroadcast(MainActivity.this,0,sentIntent,0);
-                manager.sendTextMessage(number,null,context,pi,null);
+                new Thread(new Runnable() {
+                    @Override
+                    public void run() {
+                        String number=to.getText().toString();
+                        String context=content.getText().toString();
+                        SmsManager manager=SmsManager.getDefault();
+                        Intent sentIntent=new Intent("SENT_SMS_ACTION");
+                        PendingIntent pi=PendingIntent.getBroadcast(MainActivity.this,0,sentIntent,0);
+                        manager.sendTextMessage(number,null,context,pi,null);
+                        Message message=new Message();
+                        message.what= SEND_MESSAGE;
+                        handler.sendMessage(message);
+                    }
+                }).start();
+
             }
         });
 

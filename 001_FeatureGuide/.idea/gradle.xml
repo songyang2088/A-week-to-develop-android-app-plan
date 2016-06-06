@@ -19,6 +19,7 @@
             <option value="$PROJECT_DIR$/message" />
             <option value="$PROJECT_DIR$/notification" />
             <option value="$PROJECT_DIR$/smsmessage" />
+            <option value="$PROJECT_DIR$/threadtest" />
             <option value="$PROJECT_DIR$/ziputil" />
           </set>
         </option>
