@@ -1,3 +1,18 @@
+<<<<<<< HEAD
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/pic_guidepage_1"
+         />
+
+=======
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
@@ -11,4 +26,5 @@
         android:scaleType="centerCrop"
         android:src="@mipmap/pic_guidepage_1" />
 
+>>>>>>> aaf7b2276b7739d4bfe56a36748a0b3c0cb244bc
 </LinearLayout>
