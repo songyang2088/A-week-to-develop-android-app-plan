@@ -1,2 +1,2 @@
-include ':app', ':arraylistdemo', ':fragementbestpractice', ':broadcasttest', ':broadcastbestpractice', ':databasetest', ':notification', ':smsmessage', ':message', ':ziputil', ':choosepictest'
+include ':app', ':arraylistdemo', ':fragementbestpractice', ':broadcasttest', ':broadcastbestpractice', ':databasetest', ':notification', ':smsmessage', ':message', ':ziputil', ':choosepictest', ':myservice'
 
