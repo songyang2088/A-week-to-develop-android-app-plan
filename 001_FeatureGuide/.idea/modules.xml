@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-<?xml version="1.0" encoding="UTF-8"?>
-<project version="4">
-  <component name="ProjectModuleManager">
-    <modules>
-      <module fileurl="file://$PROJECT_DIR$/001_FeatureGuide.iml" filepath="$PROJECT_DIR$/001_FeatureGuide.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-    </modules>
-  </component>
-=======
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ProjectModuleManager">
@@ -21,10 +11,10 @@
       <module fileurl="file://$PROJECT_DIR$/databasetest/databasetest.iml" filepath="$PROJECT_DIR$/databasetest/databasetest.iml" />
       <module fileurl="file://$PROJECT_DIR$/fragementbestpractice/fragementbestpractice.iml" filepath="$PROJECT_DIR$/fragementbestpractice/fragementbestpractice.iml" />
       <module fileurl="file://$PROJECT_DIR$/message/message.iml" filepath="$PROJECT_DIR$/message/message.iml" />
+      <module fileurl="file://$PROJECT_DIR$/myservice/myservice.iml" filepath="$PROJECT_DIR$/myservice/myservice.iml" />
       <module fileurl="file://$PROJECT_DIR$/notification/notification.iml" filepath="$PROJECT_DIR$/notification/notification.iml" />
       <module fileurl="file://$PROJECT_DIR$/smsmessage/smsmessage.iml" filepath="$PROJECT_DIR$/smsmessage/smsmessage.iml" />
       <module fileurl="file://$PROJECT_DIR$/ziputil/ziputil.iml" filepath="$PROJECT_DIR$/ziputil/ziputil.iml" />
     </modules>
   </component>
->>>>>>> aaf7b2276b7739d4bfe56a36748a0b3c0cb244bc
 </project>

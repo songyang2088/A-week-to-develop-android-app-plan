@@ -1,5 +1,2 @@
-<<<<<<< HEAD
-include ':app'
-=======
-include ':app', ':arraylistdemo', ':fragementbestpractice', ':broadcasttest', ':broadcastbestpractice', ':databasetest', ':notification', ':smsmessage', ':message', ':ziputil', ':choosepictest'
->>>>>>> aaf7b2276b7739d4bfe56a36748a0b3c0cb244bc
+include ':app', ':arraylistdemo', ':fragementbestpractice', ':broadcasttest', ':broadcastbestpractice', ':databasetest', ':notification', ':smsmessage', ':message', ':ziputil', ':choosepictest', ':myservice'
+
