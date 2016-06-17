@@ -11,6 +11,7 @@
       <module fileurl="file://$PROJECT_DIR$/databasetest/databasetest.iml" filepath="$PROJECT_DIR$/databasetest/databasetest.iml" />
       <module fileurl="file://$PROJECT_DIR$/fragementbestpractice/fragementbestpractice.iml" filepath="$PROJECT_DIR$/fragementbestpractice/fragementbestpractice.iml" />
       <module fileurl="file://$PROJECT_DIR$/message/message.iml" filepath="$PROJECT_DIR$/message/message.iml" />
+      <module fileurl="file://$PROJECT_DIR$/myintentservice/myintentservice.iml" filepath="$PROJECT_DIR$/myintentservice/myintentservice.iml" />
       <module fileurl="file://$PROJECT_DIR$/myservice/myservice.iml" filepath="$PROJECT_DIR$/myservice/myservice.iml" />
       <module fileurl="file://$PROJECT_DIR$/notification/notification.iml" filepath="$PROJECT_DIR$/notification/notification.iml" />
       <module fileurl="file://$PROJECT_DIR$/smsmessage/smsmessage.iml" filepath="$PROJECT_DIR$/smsmessage/smsmessage.iml" />

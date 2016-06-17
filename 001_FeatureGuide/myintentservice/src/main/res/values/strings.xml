@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">MyIntentService</string>
+    <string name="start_intent_service">Start IntentService</string>
+</resources>
