@@ -1,3 +1,9 @@
+<<<<<<< HEAD
 <resources>
     <string name="app_name">My Service</string>
 </resources>
+=======
+<resources>
+    <string name="app_name">MyService</string>
+</resources>
+>>>>>>> 3603582dcdd153234a5267ebc6f01d645393a75a
