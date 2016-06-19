@@ -1,6 +1,6 @@
+
 package com.devilwwj.featureguide.utils;
 
-import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.SharedPreferences;
 
@@ -8,7 +8,6 @@ import android.content.SharedPreferences;
  * SharedPreference操作类
  * Created by devilwwj on 16/1/23.
  */
-@SuppressWarnings("ALL")
 public class SpUtils {
     private static final String spFileName = "app";
 
@@ -33,7 +32,7 @@ public class SpUtils {
                 spFileName, Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = activityPreferences.edit();
         editor.putString(strKey, strData);
-        editor.apply();
+        editor.commit();
     }
 
     public static Boolean getBoolean(Context context, String strKey) {
@@ -52,14 +51,13 @@ public class SpUtils {
     }
 
 
-    @SuppressLint("CommitPrefEdits")
     public static void putBoolean(Context context, String strKey,
                                   Boolean strData) {
         SharedPreferences activityPreferences = context.getSharedPreferences(
                 spFileName, Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = activityPreferences.edit();
         editor.putBoolean(strKey, strData);
-        editor.apply();
+        editor.commit();
     }
 
     public static int getInt(Context context, String strKey) {
@@ -81,7 +79,7 @@ public class SpUtils {
                 spFileName, Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = activityPreferences.edit();
         editor.putInt(strKey, strData);
-        editor.apply();
+        editor.commit();
     }
 
     public static long getLong(Context context, String strKey) {
@@ -98,12 +96,11 @@ public class SpUtils {
         return result;
     }
 
-    @SuppressWarnings("unused")
     public static void putLong(Context context, String strKey, long strData) {
         SharedPreferences activityPreferences = context.getSharedPreferences(
                 spFileName, Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = activityPreferences.edit();
         editor.putLong(strKey, strData);
-        editor.apply();
+        editor.commit();
     }
 }

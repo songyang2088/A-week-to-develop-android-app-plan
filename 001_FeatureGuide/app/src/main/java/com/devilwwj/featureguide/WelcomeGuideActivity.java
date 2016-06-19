@@ -1,3 +1,4 @@
+
 package com.devilwwj.featureguide;
 
 import android.app.Activity;
@@ -21,7 +22,7 @@ import java.util.List;
 /**
  * 欢迎页
  * 
- * @author
+ * @author wwj_748
  * 
  */
 public class WelcomeGuideActivity extends Activity implements OnClickListener {
@@ -186,3 +187,4 @@ public class WelcomeGuideActivity extends Activity implements OnClickListener {
 
 	}
 }
+
