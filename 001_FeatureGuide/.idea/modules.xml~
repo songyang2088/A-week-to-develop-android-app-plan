@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/001_FeatureGuide.iml" filepath="$PROJECT_DIR$/001_FeatureGuide.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/arraylistdemo/arraylistdemo.iml" filepath="$PROJECT_DIR$/arraylistdemo/arraylistdemo.iml" />
+<<<<<<< HEAD
       <module fileurl="file://$PROJECT_DIR$/broadcastbestpractice/broadcastbestpractice.iml" filepath="$PROJECT_DIR$/broadcastbestpractice/broadcastbestpractice.iml" />
       <module fileurl="file://$PROJECT_DIR$/broadcasttest/broadcasttest.iml" filepath="$PROJECT_DIR$/broadcasttest/broadcasttest.iml" />
       <module fileurl="file://$PROJECT_DIR$/choosepictest/choosepictest.iml" filepath="$PROJECT_DIR$/choosepictest/choosepictest.iml" />
@@ -18,6 +19,10 @@
       <module fileurl="file://$PROJECT_DIR$/smsmessage/smsmessage.iml" filepath="$PROJECT_DIR$/smsmessage/smsmessage.iml" />
       <module fileurl="file://$PROJECT_DIR$/webviewtest/webviewtest.iml" filepath="$PROJECT_DIR$/webviewtest/webviewtest.iml" />
       <module fileurl="file://$PROJECT_DIR$/ziputil/ziputil.iml" filepath="$PROJECT_DIR$/ziputil/ziputil.iml" />
+=======
+      <module fileurl="file://$PROJECT_DIR$/myservice/myservice.iml" filepath="$PROJECT_DIR$/myservice/myservice.iml" />
+      <module fileurl="file://$PROJECT_DIR$/myservice/myservice.iml" filepath="$PROJECT_DIR$/myservice/myservice.iml" />
+>>>>>>> c7bf2134e7f81ac2b2403214b79c64531966d07a
     </modules>
   </component>
 </project>

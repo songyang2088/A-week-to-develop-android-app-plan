@@ -11,6 +11,7 @@
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/arraylistdemo" />
+<<<<<<< HEAD
             <option value="$PROJECT_DIR$/broadcastbestpractice" />
             <option value="$PROJECT_DIR$/broadcasttest" />
             <option value="$PROJECT_DIR$/choosepictest" />
@@ -24,6 +25,9 @@
             <option value="$PROJECT_DIR$/smsmessage" />
             <option value="$PROJECT_DIR$/webviewtest" />
             <option value="$PROJECT_DIR$/ziputil" />
+=======
+            <option value="$PROJECT_DIR$/myservice" />
+>>>>>>> c7bf2134e7f81ac2b2403214b79c64531966d07a
           </set>
         </option>
       </GradleProjectSettings>
