@@ -5,6 +5,7 @@ import android.app.IntentService;
 import android.app.Notification;
 import android.app.PendingIntent;
 import android.content.Intent;
+import android.os.SystemClock;
 import android.util.Log;
 
 /**
@@ -18,22 +19,36 @@ public class MyIntentService extends IntentService {
 
     @Override
     protected void onHandleIntent(Intent intent) {
+        //前台服务
         //当前线程的ID
+ /*       Intent notificationIntent= new Intent(this,MainActivity.class);
+        PendingIntent pendingIntent=PendingIntent.getActivity(this,0,notificationIntent,0);
         Notification notification=new Notification.Builder(this)
                 .setContentTitle("This is a Title")
                 .setContentText("this is a text")
                 .setSmallIcon(R.mipmap.ic_launcher)
                 .setNumber(1)
+                .setContentIntent(pendingIntent)
                 .build();
-        Intent notificationIntent= new Intent(this,MainActivity.class);
-        PendingIntent pendingIntent=PendingIntent.getActivity(this,0,notificationIntent,0);
+
         notification.flags=Notification.FLAG_NO_CLEAR;
         startForeground(1, notification);
-        AlarmManager alarmManager=(AlarmManager)getSystemService(ALARM_SERVICE);
-        int anHour=60*60*1000;
-        
+        long time=10000l;
+        try {
+            Thread.sleep(time);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }*/
 
-        Log.d("MyIntentService","Thread is "+Thread.currentThread().getId());
+        //定时器
+        AlarmManager alarmManager=(AlarmManager)getSystemService(ALARM_SERVICE);
+        int s=5*1000;
+        long triggerAtTime= SystemClock.elapsedRealtime()+s;
+        Intent i=new Intent(this,StartReceiver.class);
+        PendingIntent pi=PendingIntent.getBroadcast(this,0,i,0);
+        alarmManager.set(AlarmManager.ELAPSED_REALTIME_WAKEUP,triggerAtTime,pi);
+
+        Log.d("MyIntentService", "Thread is " + Thread.currentThread().getId());
 
 
     }

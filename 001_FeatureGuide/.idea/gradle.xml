@@ -19,8 +19,10 @@
             <option value="$PROJECT_DIR$/message" />
             <option value="$PROJECT_DIR$/myintentservice" />
             <option value="$PROJECT_DIR$/myservice" />
+            <option value="$PROJECT_DIR$/networktest" />
             <option value="$PROJECT_DIR$/notification" />
             <option value="$PROJECT_DIR$/smsmessage" />
+            <option value="$PROJECT_DIR$/webviewtest" />
             <option value="$PROJECT_DIR$/ziputil" />
           </set>
         </option>

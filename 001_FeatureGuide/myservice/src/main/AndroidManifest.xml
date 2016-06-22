@@ -16,8 +16,8 @@
             </intent-filter>
         </activity>
         <service android:name=".MyService">
-
         </service>
+        <receiver android:name=".StartReceiver"></receiver>
     </application>
 
 </manifest>

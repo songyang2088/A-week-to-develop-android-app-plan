@@ -4,10 +4,8 @@ import android.app.Notification;
 import android.app.PendingIntent;
 import android.app.Service;
 import android.content.Intent;
-import android.content.ServiceConnection;
 import android.os.Binder;
 import android.os.IBinder;
-import android.support.annotation.Nullable;
 import android.util.Log;
 
 /**
@@ -34,7 +32,7 @@ public class MyService extends Service {
              .setSmallIcon(R.mipmap.ic_launcher)
              .setNumber(1)
              .build();
-        Intent notificationIntent=new Intent(this,MainActivity.class);
+        Intent notificationIntent=new Intent(this,StartReceiver.class);
         PendingIntent pendingIntent=PendingIntent.getActivity(this,0,notificationIntent,0);
 //        notification.flags=Notification.FLAG_NO_CLEAR;
         startForeground(1,notification);
