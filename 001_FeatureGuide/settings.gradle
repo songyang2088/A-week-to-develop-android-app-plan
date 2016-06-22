@@ -1,4 +1,3 @@
-
-include ':app', ':arraylistdemo', ':fragementbestpractice', ':broadcasttest', ':broadcastbestpractice', ':databasetest', ':notification', ':smsmessage', ':message', ':ziputil', ':choosepictest', ':myservice', ':myintentservice', ':webviewtest', ':networktest'
+include ':app', ':arraylistdemo', ':fragementbestpractice', ':broadcasttest', ':broadcastbestpractice', ':databasetest', ':notification', ':smsmessage', ':message', ':ziputil', ':choosepictest', ':myservice', ':myintentservice', ':webviewtest', ':networktest', ':networktest2'
 
 

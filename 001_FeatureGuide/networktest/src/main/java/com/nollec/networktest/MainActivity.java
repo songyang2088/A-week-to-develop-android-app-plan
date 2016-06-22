@@ -41,6 +41,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         sendRequest = (Button) findViewById(R.id.send_request);
         responseText = (TextView) findViewById(R.id.response);
         sendRequest.setOnClickListener(this);
+
     }
 
     @Override
