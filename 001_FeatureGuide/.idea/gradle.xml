@@ -5,8 +5,28 @@
       <GradleProjectSettings>
         <option name="distributionType" value="DEFAULT_WRAPPED" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="gradleJvm" value="1.7" />
         <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/arraylistdemo" />
+            <option value="$PROJECT_DIR$/broadcastbestpractice" />
+            <option value="$PROJECT_DIR$/broadcasttest" />
+            <option value="$PROJECT_DIR$/choosepictest" />
+            <option value="$PROJECT_DIR$/databasetest" />
+            <option value="$PROJECT_DIR$/fragementbestpractice" />
+            <option value="$PROJECT_DIR$/message" />
+            <option value="$PROJECT_DIR$/myintentservice" />
+            <option value="$PROJECT_DIR$/myservice" />
+            <option value="$PROJECT_DIR$/networktest" />
+            <option value="$PROJECT_DIR$/networktest2" />
+            <option value="$PROJECT_DIR$/notification" />
+            <option value="$PROJECT_DIR$/smsmessage" />
+            <option value="$PROJECT_DIR$/webviewtest" />
+            <option value="$PROJECT_DIR$/ziputil" />
+          </set>
+        </option>
+        <option name="myModules">
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />

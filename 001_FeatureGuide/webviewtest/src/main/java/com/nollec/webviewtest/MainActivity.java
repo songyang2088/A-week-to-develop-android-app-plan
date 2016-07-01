@@ -28,6 +28,20 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         webView.loadUrl("http://www.baidu.com");
+        HttpUtil httpUtil=new HttpUtil();
+        httpUtil.sendHttpRequest("http://www.baidu.com", new HttpCallBackListener() {
+            @Override
+            //对从网站上获取的信息进行处理
+            public void onFinish(String response) {
+
+            }
+
+            @Override
+            //对网络连接异常，获取失败进行处理
+            public void onError(Exception e) {
+
+            }
+        });
     }
 
 
