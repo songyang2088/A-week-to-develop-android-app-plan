@@ -1,2 +1,7 @@
+<<<<<<< HEAD
 include ':myservice', ':app', ':arraylistdemo', ':timeouttest', ':customviewactivity', ':framelayouttest', ':datepickerdialogtest', ':beautifulgirl'
+=======
+include ':app', ':arraylistdemo', ':fragementbestpractice', ':broadcasttest', ':broadcastbestpractice', ':databasetest', ':notification', ':smsmessage', ':message', ':ziputil', ':choosepictest', ':myservice', ':myintentservice', ':webviewtest', ':networktest', ':networktest2'
+
+>>>>>>> e6f4ad129e697f8250d2c5c6acb69c625aa5827e
 
