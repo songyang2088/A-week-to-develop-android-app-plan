@@ -1,2 +1,2 @@
-include ':myservice', ':app', ':arraylistdemo'
+include ':myservice', ':app', ':arraylistdemo', ':timeouttest', ':customviewactivity', ':framelayouttest', ':datepickerdialogtest', ':beautifulgirl'
 

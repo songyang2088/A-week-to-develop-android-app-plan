@@ -5,8 +5,12 @@
       <module fileurl="file://$PROJECT_DIR$/001_FeatureGuide.iml" filepath="$PROJECT_DIR$/001_FeatureGuide.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/arraylistdemo/arraylistdemo.iml" filepath="$PROJECT_DIR$/arraylistdemo/arraylistdemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/beautifulgirl/beautifulgirl.iml" filepath="$PROJECT_DIR$/beautifulgirl/beautifulgirl.iml" />
+      <module fileurl="file://$PROJECT_DIR$/customviewactivity/customviewactivity.iml" filepath="$PROJECT_DIR$/customviewactivity/customviewactivity.iml" />
+      <module fileurl="file://$PROJECT_DIR$/datepickerdialogtest/datepickerdialogtest.iml" filepath="$PROJECT_DIR$/datepickerdialogtest/datepickerdialogtest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/framelayouttest/framelayouttest.iml" filepath="$PROJECT_DIR$/framelayouttest/framelayouttest.iml" />
       <module fileurl="file://$PROJECT_DIR$/myservice/myservice.iml" filepath="$PROJECT_DIR$/myservice/myservice.iml" />
-      <module fileurl="file://$PROJECT_DIR$/myservice/myservice.iml" filepath="$PROJECT_DIR$/myservice/myservice.iml" />
+      <module fileurl="file://$PROJECT_DIR$/timeouttest/timeouttest.iml" filepath="$PROJECT_DIR$/timeouttest/timeouttest.iml" />
     </modules>
   </component>
 </project>

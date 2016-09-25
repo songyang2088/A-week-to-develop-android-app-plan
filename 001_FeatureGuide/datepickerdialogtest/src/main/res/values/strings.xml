@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">DatePickerDialogTest</string>
+    <string name="et_hint">please enter your name</string>
+</resources>
